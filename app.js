@@ -14,6 +14,11 @@
 
   var contenedor = document.getElementById('contenedor');
 
+  div1.className = "borrables";
+  div2.className = "borrables";
+  div3.className = "borrables";
+  div4.className = "borrables";
+
   img1.src = "assets/panda-1.jpg";
   img2.src = "assets/panda5.jpg";
   img3.src = "assets/panda-3.jpg";
@@ -45,3 +50,10 @@
   contenedor.appendChild(div2);
   contenedor.appendChild(div3);
   contenedor.appendChild(div4);
+
+var borrar = document.getElementsByClassName('borrables');
+for(var i=0; i<borrar.length; i++){
+  borrar[i].addEventListener('click',function() {
+    this.style.display ="none";
+  });
+};
